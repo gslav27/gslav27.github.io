@@ -308,17 +308,24 @@ iframe {
 /* css grid examples*/
 
 .grideexamples {
-    display: inline-block;
-    min-width: 500px;
-    margin: 20px;
+  /*display: grid;*/
+  /*grid-template: repeat(2, 1fr) / repeat(4, 1fr);*/
+  display: inline-block;
+  /*min-width: 500px;*/
+  margin: 10px;
+  /*grid-gap: 20px;*/
 } /*for examples stand inline*/
+
+
 
 .container1 {
   display: grid;
   border: 1px darkgrey dashed;
-  max-width: 700px;
+  /*max-width: 700px;*/
+  /*min-width: 100%;*/
+  width: 100%;
   position: relative;
-  margin: auto;
+  margin-top: 0px;
   grid-gap: 10px;
   grid-template-areas: "head head"
                        "nav nav" 
@@ -366,7 +373,9 @@ iframe {
 .container2 {
   display: grid;
   border: 1px darkgrey dashed;
-  max-width: 700px;
+  /*max-width: 700px;*/
+  /*min-width: 100%;*/
+  width: 100%;
   position: relative;
   margin: auto;
   grid-gap: 10px;
@@ -419,4 +428,90 @@ iframe {
 
 .container2 h3 {
     text-align: center;
+}
+
+.jsblock {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #090934;
+  border-radius: 3px;
+  /*box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);*/
+  padding: 10px 25px 25px 25px;
+  margin: 15px;
+}
+
+.jsblock h4 {
+  border-bottom: 1px solid #090934;
+  color: #090934;
+  text-transform: uppercase;  
+  text-align: center;
+}
+
+.buttonjs button {
+  position: relative;
+  cursor: pointer;
+  min-width: 70px;
+  background-color: #0909ff;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 15px;
+  /*font-size: 14px;*/
+  /*font-weight: bold;*/
+  font: 18px Arial, sans-serif;
+}
+
+.buttonjs button:nth-child(2) {
+  background-color: #ff0000;
+}
+
+.buttonjs button:nth-child(3) {
+  background-color: #888;
+}
+
+.buttonjs button:hover {
+  opacity: 0.75;
+}
+
+.buttonjs button:active {
+  top: 2px;
+}
+
+.propertybutton button:nth-child(1) {
+  color: #090934;
+  background-color: #fff;
+  font-weight: bold;
+  border: 1px solid #090934;
+}
+
+.propertybutton button:nth-child(2) {
+  background-color: #090934;
+  border: 1px solid #090934;
+}
+
+.jsresult {
+  text-align: center;
+  border: 1px dashed #888;
+  border-radius: 4px;
+  padding: 20px 25px;
+  margin-bottom: 0;
+  font: bold 18px Arial, sans-serif;
+  color: #888;
+  background-color: #fcba12; 
+}
+
+@media screen and (min-width: 700px) {
+.grideexamples {
+  display: grid;
+  grid-template: 10% 90% / repeat(2, 1fr);
+  /*display: inline-block;*/
+  /*min-width: 500px;*/
+  margin: 10px;
+  grid-gap: 20px;
+}
+
+.grideexamples h2 {
+  grid-row: 1;
+}
+
 }
