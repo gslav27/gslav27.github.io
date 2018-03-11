@@ -1,3 +1,19 @@
+// googlemap functions
+function myMap1() {
+  var myCenterDUBR1 = new google.maps.LatLng(51.571727, 26.567370);
+  var mapCanvas = document.getElementById("googlemap1");
+  var mapDUBR1 = {center: myCenterDUBR1, zoom: 17};
+  var map = new google.maps.Map(mapCanvas, mapDUBR1);
+  var marker = new google.maps.Marker({position:myCenterDUBR1, icon: "images/logo.png"});
+  marker.setMap(map);
+  var myCenterDUBR2 = new google.maps.LatLng(51.571727, 26.567370);
+  var mapCanvas = document.getElementById("googlemap2");
+  var mapDUBR2 = {center: myCenterDUBR2, zoom: 17, mapTypeId: google.maps.MapTypeId.HYBRID};
+  var map = new google.maps.Map(mapCanvas, mapDUBR2);
+  var marker = new google.maps.Marker({position:myCenterDUBR2});
+  marker.setMap(map)
+}
+
 function changeTextColor(textColor, borderColor) {
 	var elem = document.getElementById('textresult');
 	elem.style.color = textColor;
@@ -42,10 +58,11 @@ function defaultSettings(inputColor) {
 var ourType;
 
 // set 'ourType' to selected option of css-property
-function set(input) {
+function set(property, text) {
 	var elem = document.getElementById('inserttype');
-	elem.innerHTML = input; // insert a text of selected css-property
-	ourType = input;
+	elem.textContent = text; // insert a text of selected css-property
+	document.getElementById('inactive').style.display = 'block'; // make color buttons available
+	ourType = property;
 	return ourType;
 }
 
@@ -64,5 +81,5 @@ var start = (function saveSettings () {
 // set default css style
 function toStart(startValue) {
 	var elem = document.getElementById('result');
-	elem.style = startValue;
+	elem.style = startValue; 
 }
