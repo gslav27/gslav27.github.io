@@ -18,7 +18,7 @@ The border thickness and padding will be included entirely inside of the box
 The difference between display: none and visibility: hidden  -->
 --> display: none will be completely removed from the web page. 
 --> visibility: hidden will not be visible on the web page, but the space reserved for it will.
-*/
+*/                        
 
 /* a very common design pattern used to scale images and videos proportionally
 .container {
@@ -71,9 +71,14 @@ The browser will require only one of the media features before it renders the CS
 */
 
 body {
-    padding: 0 20px;  /*defines a padding (space) between the text and the border*/
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+  padding: 0px 15px;  /*defines a padding (space) between the text and the border*/
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+p {
+  min-width: 200px;
+  /*min-height: 200px;*/
 }
 
 /*ul, li, li a, li a:hover makes top menu*/
@@ -267,11 +272,22 @@ iframe {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 */
+.youtube {
+  text-align: center;
+}
+
+#youtube {
+  /*display: block;*/
+  /*align-content: center;*/
+  height: 240px;
+  width: 320px;
+}
 
 .googlemap {
   display: inline-block;
-  margin: 20px;
-
+  width: 100%;
+  height: 400px;
+  margin: 10px;
 }
 
 /* css grid */
@@ -367,7 +383,7 @@ iframe {
 }
 
 .container1 h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .container2 {
@@ -430,14 +446,91 @@ iframe {
     text-align: center;
 }
 
-.jsblock {
+/* Blog Post */
+
+#blog {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blog .post {
+  width: 80%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.8;
+  color: #444444;
+}
+
+.post h2 {
+  font-size: 1.875rem;
+  margin: 0;
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  color: #999999;
+  margin: 0;
+}
+
+.post .opening-line {
+  margin-top: 2.1875rem;
+  color: black;
+  font-weight: bold;
+}
+
+.post .image-container {
+  width: 100%;
+}
+
+/* Blog Images */
+
+.images {
+  margin-bottom: 5%;
+}
+
+.images .image-container {
   display: inline-block;
+  width: 50%;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  /*display: block;*/
+  /*align-content: center;*/
+}
+
+/* JS */
+
+.gridjsblock{
+  /*text-align: center;*/
+  display: flex;
+  flex-wrap: wrap; /* move blocks like 'inline-block' */
+  justify-content: center;  
+}
+
+.jsblock {
+  display: block;
   background-color: #fff;
   border: 1px solid #090934;
   border-radius: 3px;
-  /*box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);*/
-  padding: 10px 25px 25px 25px;
+  padding: 10px 15px 25px 15px;
   margin: 15px;
+  align-items: center;
 }
 
 .jsblock h4 {
@@ -445,6 +538,12 @@ iframe {
   color: #090934;
   text-transform: uppercase;  
   text-align: center;
+  margin: 15px 0;
+  padding: 0px 5px;
+}
+
+.jsblock p {
+  margin: 15px 1px 0px 1px;
 }
 
 .buttonjs button {
@@ -498,6 +597,11 @@ iframe {
   font: bold 18px Arial, sans-serif;
   color: #888;
   background-color: #fcba12; 
+}
+
+#inactive {
+  display: none; 
+  /*visibility: hidden;*/
 }
 
 @media screen and (min-width: 700px) {
