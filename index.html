@@ -8,22 +8,25 @@
     <title>CSS в действии</title>
   </head>
   <body>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#image-map">Image-map</a></li>
-      <li><a href="#cite1link">SomeData</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About &trade;</a></li> <!--&trade is an HTML entity name;-->
-    </ul>
+    <header>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#image-map">Image-map</a></li>
+          <li><a href="#cite1link">SomeData</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About &trade;</a></li> <!--&trade is an HTML entity name;-->
+        </ul>
+      </nav>
+    </header>
     <h1>CSS</h1>
     <p>CSS ещё проще, чем HTML. Он состоит из множества правил, примерно таких:</p>
     <!--<img src="16530618.JPG" width="250" height="250">-->
     <pre>
-        селектор {
-        свойство1: <em>значение1</em>;
-        свойство2: <em>значение2</em>;
-        }
-    </pre>
+    селектор {
+      свойство1: <em>значение1</em>;
+      свойство2: <em>значение2</em>;
+    }</pre>
     <p>Правила очень простые. Но есть одна проблема: свойств <em>очень</em> много.</p>
     <p>Большая часть курса будет посвящена именно CSS.</p>
     <p>А сейчас поработайте с нижним редактором.</p>
@@ -32,11 +35,11 @@
     <p>Move the mouse over the button to open the dropdown menu.</p>
     <div class="dropdown">
       <button class="dropbtn">menu button</a></button>
-        <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#htmlforms">HTML forms</a>
-            <a href="#">&sum; Link 3</a>
-        </div>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#htmlforms">HTML forms</a>
+        <a href="#">&sum; Link 3</a>
+      </div>
     </div>
     
     <div class="contactbtn"><a>Contact</a>
@@ -73,14 +76,14 @@
     <h2>PictureTag</h2>
     <p>Picture element to add &Delta; more flexibility when specifying image resources. The browser can choose the image that best fit the current view and/or <span id="sizevw">device</span> (text size of "device" word is responsive).</p>
     <picture>
-      <source media="(min-width: 800px)" srcset="images/eagles.jpg">
+      <source media="(min-width: 500px)" srcset="images/eagles.jpg">
       <img src="images/16530618.jpg" alt="amberusb" style="width:auto;">
     </picture>
     <a href="#" id="back-to-top" title="Back to top" class="show"></a> <!--Back-to-top button test-->
     <hr>
     <p>If you wanna see how iframe-tag is worked, put on this link &rarr; <a href="https://en.wikipedia.org/wiki/Poker" target="game" title="read more">Poker</a><p>
     <br>
-    <iframe src="images/poker.jpg" name="game" width="500" height="300" sandbox=""></iframe>
+    <iframe src="images/poker.jpg" name="game" width="90%" height="auto" sandbox=""></iframe>
     <br>
     <h2 id="htmlforms">HTML Forms</h2>
     <form action="php/action_page.php" target="_blank"> <!--also attribute method="get" or "post"-->
