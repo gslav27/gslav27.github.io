@@ -1,0 +1,87 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	font: 300 16px Verdana ,sans-serife;
+	color:#444;
+}
+
+.prlx_1, .prlx_2, .prlx_3, .prlx_4 {
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.prlx_1 {
+	background-image: url('../images/parallax_ombre_2.jpg');
+	min-height: 100%;
+}
+
+.prlx_2 {
+	background-image: url('../images/parallax_ombre_5.jpg');
+	min-height: 45%;
+}
+
+.prlx_3 {
+	background-image: url('../images/parallax_ombre_1.jpg');
+	min-height: 45%;
+}
+
+.prlx_4 {
+	background-image: url('../images/parallax_ombre_3.jpg');
+	min-height: 70%;
+}
+
+.prlxtext {
+	position: absolute;
+	/*top: 50%;
+	width: 100%;*/
+	text-align: center;
+	font-size: 27px;
+	line-height: 1.6em;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	/*opacity: 1;*/
+}
+
+.prlxtext .prlxtextborder {
+	background-color: #E3B619;
+	color: #111;
+	padding: 10px;
+}
+
+.prlxtext .prlxtextborder.transp {
+	background-color: transparent;
+	color: #E3B619;
+}
+
+.prlxtext .prlxtextborder.transplast {
+	background-color: #111;
+	color: #E3B619;	
+}
+
+section, .lastsection {
+	text-align: center;
+	padding: 45px 10%;
+	line-height: 1.6em;
+}
+
+.lastsection {
+	padding: 10px;
+	background-color: #111;
+	color: #999;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+@media (max-width: 700px) {
+	.prlx_1, .prlx_2, .prlx_3, .prlx_4 {
+		background-attachment: scroll;
+	}
+
+}
