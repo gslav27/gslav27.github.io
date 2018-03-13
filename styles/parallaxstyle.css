@@ -1,6 +1,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
+	line-height: 1.6em;
 	font: 300 16px Verdana ,sans-serife;
 	color:#444;
 }
@@ -11,10 +12,11 @@ html, body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	display: flex;
+	/*display: flex;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
+	text-align: center;*/
+
 }
 
 .prlx_1 {
@@ -39,11 +41,10 @@ html, body {
 
 .prlxtext {
 	position: absolute;
-	/*top: 50%;
-	width: 100%;*/
+	top: 45%;
+	width: 100%;
 	text-align: center;
-	font-size: 27px;
-	line-height: 1.6em;
+	font-size: 1.7rem;
 	letter-spacing: 5px;
 	text-transform: uppercase;
 	/*opacity: 1;*/
@@ -52,7 +53,7 @@ html, body {
 .prlxtext .prlxtextborder {
 	background-color: #E3B619;
 	color: #111;
-	padding: 10px;
+	padding: 5px;
 }
 
 .prlxtext .prlxtextborder.transp {
@@ -68,7 +69,6 @@ html, body {
 section, .lastsection {
 	text-align: center;
 	padding: 45px 10%;
-	line-height: 1.6em;
 }
 
 .lastsection {
@@ -82,6 +82,11 @@ section, .lastsection {
 @media (max-width: 700px) {
 	.prlx_1, .prlx_2, .prlx_3, .prlx_4 {
 		background-attachment: scroll;
+	}
+
+	.prlxtext .prlxtextborder {
+		padding: 0;
+		letter-spacing: 2px
 	}
 
 }
