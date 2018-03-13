@@ -20,22 +20,22 @@ html, body {
 }
 
 .prlx_1 {
-	background-image: url('../images/parallax_ombre_2.jpg');
+	background-image: url('../images/parallax_ombre_2small.jpg');
 	min-height: 100%;
 }
 
 .prlx_2 {
-	background-image: url('../images/parallax_ombre_5.jpg');
+	background-image: url('../images/parallax_ombre_5small.jpg');
 	min-height: 45%;
 }
 
 .prlx_3 {
-	background-image: url('../images/parallax_ombre_1.jpg');
+	background-image: url('../images/parallax_ombre_1small.jpg');
 	min-height: 45%;
 }
 
 .prlx_4 {
-	background-image: url('../images/parallax_ombre_3.jpg');
+	background-image: url('../images/parallax_ombre_3small.jpg');
 	min-height: 70%;
 }
 
@@ -89,4 +89,22 @@ section, .lastsection {
 		letter-spacing: 2px
 	}
 
+}
+
+@media only screen and (min-width: 1600px) {
+	.prlx_1 {
+	background-image: url('../images/parallax_ombre_2.jpg');
+}
+
+.prlx_2 {
+	background-image: url('../images/parallax_ombre_5.jpg');
+}
+
+.prlx_3 {
+	background-image: url('../images/parallax_ombre_1.jpg');
+}
+
+.prlx_4 {
+	background-image: url('../images/parallax_ombre_3.jpg');
+}
 }
