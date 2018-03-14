@@ -217,6 +217,7 @@ em {
 
 /*#back-to-top, #back-to-top:hover, #back-to-top.show are test code for back-to-top button*/
 #back-to-top {
+    display: none;
     position: fixed;
     bottom: 40px;
     right: 40px;
