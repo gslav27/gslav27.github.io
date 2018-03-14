@@ -80,24 +80,25 @@ section, .lastsection {
 }
 
 #back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  width: 31px;
-  height: 32px;
-  cursor: pointer;
-  transition: opacity 2.2s ease-out;
-  background: url("../images/Back-to-home.png");
-  /*opacity: 0;*/
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9999;
+	width: 31px;
+	height: 32px;
+	cursor: pointer;
+	transition: opacity 2.2s ease-out;
+	background: url("../images/Back-to-home.png");
+	/*opacity: 0;*/
 }
 
 #back-to-top:hover {
-  background-position: 31px 0;
+	background-position: 31px 0;
 }
 
 /*#back-to-top.show {
-  opacity: 1;
+	opacity: 1;
 }*/
 
 @media (max-width: 700px) {
