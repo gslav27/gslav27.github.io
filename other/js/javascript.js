@@ -26,7 +26,7 @@ function myMap1() {
   var mapCanvas = document.getElementById("googlemap1");
   var mapDUBR1 = {center: myCenterDUBR1, zoom: 17};
   var map = new google.maps.Map(mapCanvas, mapDUBR1);
-  var marker = new google.maps.Marker({position:myCenterDUBR1, icon: "images/logo.png"});
+  var marker = new google.maps.Marker({position:myCenterDUBR1, icon: "other/images/logo.png"});
   marker.setMap(map);
   var myCenterDUBR2 = new google.maps.LatLng(51.571727, 26.567370);
   var mapCanvas = document.getElementById("googlemap2");
