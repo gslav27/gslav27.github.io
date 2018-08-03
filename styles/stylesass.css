@@ -157,7 +157,7 @@ article > h2, article > p, article > div {
 }
 .grideexamples div:nth-of-type(2) footer {
   grid-area: 8/1/10/7;
-  background-image: url("../images/camelbackground.png");
+  background-image: url("../other/images/camelbackground.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -350,7 +350,7 @@ article > h2, article > p, article > div {
   height: 32px;
   cursor: pointer;
   transition: opacity 2.2s ease-out;
-  background: url("../images/Back-to-home.png");
+  background: url("../other/images/Back-to-home.png");
 }
 #back-to-top:hover {
   background-position: 31px 0;
