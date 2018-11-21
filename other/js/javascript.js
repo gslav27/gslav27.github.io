@@ -40,10 +40,12 @@ function myMap1() {
 
 // >>> for back-to-top button
 window.onscroll = function() {
-	scrollFunction()
+	scrollFunction();
+	console.log('ScrollHandler');
 };
 
 function scrollFunction() {
+	console.log('ScrollFunction');
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		document.getElementById("back-to-top").style.display = "block";
 	} else {
