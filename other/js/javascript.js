@@ -3,7 +3,7 @@
 var button = document.getElementById( 'menu-toggle' );
 
 // Click the button.
-button && button.onclick = function() {
+button.onclick = function() {
   // Toggle class "opened". Set also aria-expanded to true or false.
   if ( -1 !== button.className.indexOf( 'opened' ) ) {
     button.className = button.className.replace( ' opened', '' );
@@ -41,11 +41,9 @@ function myMap1() {
 // >>> for back-to-top button
 window.onscroll = function() {
 	scrollFunction();
-	console.log('ScrollHandler');
 };
 
 function scrollFunction() {
-	console.log('ScrollFunction');
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 		document.getElementById("back-to-top").style.display = "block";
 	} else {
