@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .navbar {
   overflow: hidden;
   background-color: #303030;
@@ -74,35 +78,37 @@ article > h2, article > p, article > div {
 
 .portfolio {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1600px;
   margin: auto;
+  padding: 0 5px;
 }
-.portfolio a {
+.portfolio > a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 10px;
-  width: 300px;
+  max-width: 320px;
   background-color: white;
   border: 2px solid black;
   border-radius: 5px;
   text-decoration: none;
 }
-.portfolio a:hover {
+.portfolio > a:hover {
   box-shadow: 0px 0px 10px #000;
 }
-.portfolio a .image {
+.portfolio > a .image {
   flex: 1;
+  position: relative;
 }
-.portfolio a img {
+.portfolio > a .image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.portfolio a span {
+.portfolio > a span {
   width: 100%;
   padding: 10px 0px;
   border-radius: 0px 0px 5px 5px;
@@ -113,6 +119,21 @@ article > h2, article > p, article > div {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: 900;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .portfolio > a {
+    width: calc(50% - 30px);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .portfolio > a {
+    width: calc(33.3% - 30px);
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio > a {
+    width: calc(25% - 30px);
+  }
 }
 
 .grideexamples {

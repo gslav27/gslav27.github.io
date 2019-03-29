@@ -10,7 +10,27 @@ $border-dashed: 1px dashed #888;
 $first-button-color: #0909ff;
 $second-button-color: #ff0000;
 
+// breakpoints
+$breakpointXS: 0px;
+$breakpointSM: 480px;
+$breakpointMD: 768px;
+$breakpointLG: 1024px;
+$breakpointXL: 1600px;
 
+@mixin widthSm {
+  @media (min-width: $breakpointSM) and (max-width: ($breakpointMD - 1)) { @content; }
+};
+@mixin widthMd {
+  @media (min-width: $breakpointMD) and (max-width: ($breakpointLG - 1)) { @content; }
+};
+@mixin widthLgMIN {
+  @media (min-width: $breakpointLG) { @content; }
+};
+
+
+
+// hide additional sections
+.hidden { display: none };
 
 // NavBar
 .navbar {
@@ -104,17 +124,18 @@ article > h2, article > p, article > div {
 // portfolio
 .portfolio {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1600px;
   margin: auto;
-  a {
+  padding: 0 5px;
+  > a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 10px;
-    width: 300px;
+    max-width: 320px;
     background-color: white;
     border: 2px solid black;
     border-radius: 5px;
@@ -124,11 +145,23 @@ article > h2, article > p, article > div {
     }
     .image {
       flex: 1;
-    }
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+      position: relative;
+      // .linkIcon {
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   width: 24px;
+      //     height: 24px;
+      //   svg {
+      //     width: 24px;
+      //     height: 24px;
+      //   };
+      // }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
     span {
       width: 100%;
@@ -141,6 +174,15 @@ article > h2, article > p, article > div {
       text-transform: uppercase;
       font-size: 1.2em;
       font-weight: 900;
+    }
+    @include widthSm {
+      width: calc(50% - 30px);
+    }
+    @include widthMd {
+      width: calc(33.3% - 30px);
+    }
+    @include widthLgMIN() {
+      width: calc(25% - 30px);
     }
   }
 }
